@@ -3,6 +3,26 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include "test.h"
+
+void build_cmd(char *dest, Test *t)
+{
+    char *pos = strstr(t->cmd, "{program}");
+
+    if (!pos)
+    {
+        strcpy(dest, t->cmd);
+        return;
+    }
+
+    int prefix = pos - t->cmd;
+
+    strncpy(dest, t->cmd, prefix);
+    dest[prefix] = '\0';
+
+    strcat(dest, t->program);
+    strcat(dest, pos + strlen("{program}"));
+}
 
 int run(char *cmd, char *input, char *output)
 {
@@ -17,8 +37,9 @@ int run(char *cmd, char *input, char *output)
     // Child Process
     if (pid == 0)
     {
-        dup2(in_pipe[0], 0);        
-        dup2(out_pipe[1], 1);
+        dup2(in_pipe[0], STDIN_FILENO);
+        dup2(out_pipe[1], STDOUT_FILENO);
+        dup2(out_pipe[1], STDERR_FILENO);
 
         close(in_pipe[0]);
         close(in_pipe[1]);

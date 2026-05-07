@@ -1,6 +1,7 @@
 test_compile
   "name": "Compilation",
-  "cmd": "gcc calculator.c -o calculator",
+  "program": "calculator.c",
+  "cmd": "gcc {program} -o calculator",
   "input": "NONE",
   "expected_output": "NONE",
   "score": 25
@@ -8,22 +9,25 @@ end
   
 test_add
   "name": "Addition",
+  "program": "calculator.c",
   "cmd": "./calculator add",
   "input": "15\n10\n",
-  "expected_output": "25\n",
+  "expected_output": "Enter num1:\nEnter num2:\n15 + 10 = 25\n",
   "score": 25
 end
 
 test_multiply
   "name": "Multiplication",
+  "program": "calculator.c",
   "cmd": "./calculator mul",
   "input": "15\n10\n",
-  "expected_output": "150\n",
+  "expected_output": "Enter num1:\nEnter num2:\n15 * 10 = 150\n",
   "score": 25
 end
 
 test_no_args
   "name": "No Arguments",
+  "program": "calculator.c",
   "cmd": "./calculator",
   "input": "NONE",
   "expected_output": "Usage: ./calculator <operation>\n",

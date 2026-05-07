@@ -12,6 +12,27 @@ void print_test(Test *test)
     printf("Score: %d\n", test->score);
 }
 
+void unescape(char *str)
+{
+    char buffer[1024];
+    int i = 0;
+    int j = 0;
+
+    while (str[i])
+    {
+        if (str[i] == '\\' && str[i + 1] == 'n')
+        {
+            buffer[j++] = '\n';
+            i += 2;
+        }
+        else
+            buffer[j++] = str[i++];
+    }
+
+    buffer[j] = '\0';
+    strcpy(str, buffer);
+}
+
 void extract(char *line, char *field)
 {
     char *first_quote = strchr(line, '"');
@@ -35,6 +56,7 @@ void extract(char *line, char *field)
     int len = value_end - value_start;
     strncpy(field, value_start, len);
     field[len] = '\0';
+    unescape(field);
 }
 
 int parse(char *tests_file, Test tests[])
@@ -64,6 +86,9 @@ int parse(char *tests_file, Test tests[])
         {
             if (strstr(line, "\"name\""))
                 extract(line, test.name);
+            
+            else if (strstr(line, "\"program\""))
+                extract(line, test.program);
             
             else if (strstr(line, "\"cmd\""))
                 extract(line, test.cmd);

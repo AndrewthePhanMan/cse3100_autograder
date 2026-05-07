@@ -3,8 +3,8 @@
 
 typedef struct {
     char name[256];
+    char program[256];
     char cmd[256];
-    char args[1024];
     char input[1024];
     char expected_output[1024];
     int score;
