@@ -1,0 +1,17 @@
+test_compile
+  "name": "Compilation",
+  "program": "loop.c",
+  "cmd": "gcc {program} -o loop",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end
+  
+test_loop
+  "name": "Loop",
+  "program": "loop.c",
+  "cmd": "./loop",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end

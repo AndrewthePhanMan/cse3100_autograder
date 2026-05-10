@@ -18,7 +18,7 @@ test.o: test.c test.h runner.h
 output.o: output.c
 	$(CC) $(CFLAGS) -c output.c
 
-main.o: main.c parser.h runner.h output.h
+main.o: main.c parser.h test.h output.h
 	$(CC) $(CFLAGS) -c main.c
 
 clean:

@@ -1,0 +1,8 @@
+test_python
+  "name": "Python Test",
+  "program": "python.py",
+  "cmd": "python3 {program}",
+  "input": "Andrew\n",
+  "expected_output": "Hello, Andrew\n",
+  "score": 100
+end

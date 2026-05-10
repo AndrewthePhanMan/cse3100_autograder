@@ -1,0 +1,10 @@
+{
+    "tests": [
+  {
+      "name": "Python Test",
+      "passed": true,
+      "output": "Hello, Andrew\n",
+      "score": 100
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+test_compile
+  "name": "Compilation",
+  "program": "segfault.c",
+  "cmd": "gcc {program} -o segfault",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end
+
+test_run
+  "name": "Run",
+  "program": "segfault.c",
+  "cmd": "./segfault",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end

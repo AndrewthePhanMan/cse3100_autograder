@@ -63,6 +63,12 @@ int parse(char *tests_file, Test tests[])
 {
     FILE *file = fopen(tests_file, "r");
 
+    if (!file)
+    {
+        perror("fopen() failed.");
+        return 0;
+    }
+
     char line[1024];
     int status = 0;
     int count = 0;

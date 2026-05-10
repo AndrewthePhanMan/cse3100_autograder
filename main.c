@@ -5,8 +5,13 @@
 
 int main(int argc, char *argv[])
 {
-    char *submission = argv[1];
-    char *test_file = argv[2];
+    if (argc < 2)
+    {
+        fprintf(stderr, "Usage: %s <test_file>\n", argv[0]);
+        return 1;
+    }
+
+    char *test_file = argv[1];
 
     Test tests[100];
     Result results[100];

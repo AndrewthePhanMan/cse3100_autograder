@@ -1,0 +1,8 @@
+test_compile
+  "name": "Compilation Failure",
+  "program": "compile.c",
+  "cmd": "gcc {program} -o compile",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 100
+end
