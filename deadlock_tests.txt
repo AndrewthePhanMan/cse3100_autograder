@@ -1,0 +1,17 @@
+test_compile
+  "name": "Compilation",
+  "program": "deadlock.c",
+  "cmd": "gcc {program} -o deadlock",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end
+
+test_run
+  "name": "Run",
+  "program": "deadlock.c",
+  "cmd": "./deadlock",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end

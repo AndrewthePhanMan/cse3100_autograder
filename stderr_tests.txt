@@ -1,0 +1,17 @@
+test_compile
+  "name": "Compile",
+  "program": "stderr.c",
+  "cmd": "gcc {program} -o stderr_test",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end
+
+test_run
+  "name": "stderr capture",
+  "program": "stderr.c",
+  "cmd": "./stderr_test",
+  "input": "NONE",
+  "expected_output": "stderr\n",
+  "score": 50
+end

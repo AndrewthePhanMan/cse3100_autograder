@@ -1,10 +1,16 @@
 {
     "tests": [
   {
-      "name": "Python Test",
+      "name": "Compilation",
       "passed": true,
-      "output": "Hello, Andrew\n",
-      "score": 100
+      "output": "",
+      "score": 50
+  },
+  {
+      "name": "Run",
+      "passed": false,
+      "output": "Segmentation fault (core dumped)\n",
+      "score": 0
   }
  ]
 }

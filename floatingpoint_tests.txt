@@ -1,0 +1,17 @@
+test_compile
+  "name": "Compile",
+  "program": "floatingpoint.c",
+  "cmd": "gcc {program} -o floatingpoint",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end
+
+test_divide0
+  "name": "Divide By 0",
+  "program": "floatingpoint.c",
+  "cmd": "./floatingpoint",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end

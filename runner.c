@@ -113,7 +113,8 @@ RunData run(char *cmd, char *input)
     {
         data.crashed = 1;
         char msg[128];
-        snprintf(msg, sizeof(msg), "CRASHED: Signal %d", WTERMSIG(status));
+        snprintf(msg, sizeof(msg), "CRASHED: Signal here", WTERMSIG(status));
+        // signal is carried over to data.output, but isn't utilized bc output already shows the error
         strcat(data.output, msg);
     }
 

@@ -1,0 +1,17 @@
+test_compile
+  "name": "Compilation",
+  "program": "recursion.c",
+  "cmd": "gcc {program} -o recursion",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end
+  
+test_loop
+  "name": "Infinite Recursion",
+  "program": "recursion.c",
+  "cmd": "./recursion",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end

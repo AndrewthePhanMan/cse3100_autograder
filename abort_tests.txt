@@ -1,0 +1,17 @@
+test_compile
+  "name": "Compilation",
+  "program": "abort.c",
+  "cmd": "gcc {program} -o abort",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end
+
+test_abort
+  "name": "Abort",
+  "program": "abort.c",
+  "cmd": "./abort",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end

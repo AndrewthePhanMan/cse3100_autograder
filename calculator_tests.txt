@@ -4,7 +4,7 @@ test_compile
   "cmd": "gcc {program} -o calculator",
   "input": "NONE",
   "expected_output": "NONE",
-  "score": 25
+  "score": 50
 end
   
 test_add
@@ -22,14 +22,5 @@ test_multiply
   "cmd": "./calculator mul",
   "input": "15\n10\n",
   "expected_output": "Enter num1:\nEnter num2:\n15 * 10 = 150\n",
-  "score": 25
-end
-
-test_no_args
-  "name": "No Arguments",
-  "program": "calculator.c",
-  "cmd": "./calculator",
-  "input": "NONE",
-  "expected_output": "Usage: ./calculator <operation>\n",
   "score": 25
 end

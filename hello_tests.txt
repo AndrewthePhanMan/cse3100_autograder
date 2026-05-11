@@ -1,0 +1,17 @@
+test_compile
+  "name": "Compile",
+  "program": "hello.c",
+  "cmd": "gcc {program} -o hello",
+  "input": "NONE",
+  "expected_output": "NONE",
+  "score": 50
+end
+
+test_output
+  "name": "Wrong Output",
+  "program": "hello.c",
+  "cmd": "./hello",
+  "input": "NONE",
+  "expected_output": "Goodbye\n",
+  "score": 50
+end
