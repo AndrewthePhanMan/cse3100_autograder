@@ -90,7 +90,7 @@ RunData run(char *cmd, char *input)
         sleep(1);
         runtime++;
 
-        if (runtime >= 5)
+        if (runtime >= 10)
         {
             kill(pid, SIGKILL);
             data.timed_out = 1;
