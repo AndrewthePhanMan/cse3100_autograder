@@ -1,16 +1,16 @@
 {
     "tests": [
   {
-      "name": "Compilation",
+      "name": "Andrew Test",
       "passed": true,
-      "output": "",
+      "output": "Hello, Andrew\n",
       "score": 50
   },
   {
-      "name": "Infinite Recursion",
-      "passed": false,
-      "output": "Segmentation fault (core dumped)\n",
-      "score": 0
+      "name": "Alex Test",
+      "passed": true,
+      "output": "Hello, Alex\n",
+      "score": 50
   }
  ]
 }
