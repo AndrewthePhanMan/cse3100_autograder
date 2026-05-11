@@ -7,7 +7,7 @@
       "score": 50
   },
   {
-      "name": "Run",
+      "name": "Infinite Recursion",
       "passed": false,
       "output": "Segmentation fault (core dumped)\n",
       "score": 0
